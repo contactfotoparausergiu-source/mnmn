@@ -1,0 +1,3 @@
+document.addEventListener('DOMContentLoaded',()=>{const groups=[...document.querySelectorAll('.nav-dropdown')];groups.forEach(g=>g.addEventListener('toggle',()=>{if(g.open)groups.forEach(other=>{if(other!==g)other.open=false})}));document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown'))groups.forEach(g=>g.open=false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')groups.forEach(g=>g.open=false)})});
+// Scurtătură administrare: Windows Ctrl+Alt+Shift+Z / macOS Command+Option+Shift+Z.
+document.addEventListener('keydown',e=>{if(e.code==='KeyA'&&e.shiftKey&&e.altKey&&!e.ctrlKey&&!e.metaKey){e.preventDefault();location.href='admin.html'}});

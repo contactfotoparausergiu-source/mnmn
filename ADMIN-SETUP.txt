@@ -1,0 +1,14 @@
+ZUNIVO - ACTIVARE ADMIN EMAIL
+
+1. In Supabase Authentication > Users creeaza utilizatorul contactfotoparausergiu@gmail.com si seteaza o parola NOUA, privata.
+2. Copiaza UUID-ul contului nou.
+3. In SQL Editor, DUPA ce ai instalat schema Zunivo V11/V12, executa:
+
+DELETE FROM public.zunivo_admins WHERE username = 'parausergiu';
+INSERT INTO public.zunivo_admins (user_id, username) VALUES ('UUID-NOU'::uuid, 'contactfotoparausergiu@gmail.com');
+
+4. Verifica autentificarea in admin.html. Abia apoi sterge vechiul utilizator din Authentication > Users.
+5. Combinatie Windows: Alt + Shift + A. Mac: Option + Shift + A.
+6. config.js trebuie completat cu URL si cheia publicabila Supabase.
+
+NU pune parola in fisierele HTML/JS/SQL. Nu incarca SQL/TXT in directorul public al site-ului.

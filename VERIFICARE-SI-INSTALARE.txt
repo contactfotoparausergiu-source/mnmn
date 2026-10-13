@@ -1,0 +1,28 @@
+ZUNIVO V12 - PACHET REVIZUIT
+
+ATENTIE: Nu exista o garantie de 100% fara testarea pe proiectul Supabase si domeniul tau InfinityFree.
+
+CORECTII:
+- Eliminata initializarea dubla Supabase pe paginile V7/V8 (posibile erori intermitente).
+- Inclus restaurant_details in catalogul administrativ securizat.
+- La schimbarea categoriei din Restaurant in alta categorie se sterg detaliile restaurantului vechi.
+- Verificate linkurile locale, referintele scripturilor, sintaxa JS si integritatea ZIP.
+
+INSTALARE:
+1. Fa backup la htdocs si la baza de date Supabase.
+2. Daca ai instalat deja V12, NU rula din nou tot supabase.sql; inlocuieste doar fisierele HTML/CSS/JS. Pentru a permite editarea restaurantelor din Admin, executa DOAR sectiunea ZUNIVO V11 (recreeaza functia admin) DUPA ce exista restaurant_details.
+3. Daca ai V11, ruleaza DOAR sectiunea ZUNIVO V12 in Supabase SQL Editor; apoi, pentru catalogul admin, recreeaza functia din sectiunea V11.
+4. Pentru instalare noua ruleaza supabase.sql in ordine, dupa ce verifici eventualele erori SQL.
+5. Completeaza config.js cu URL-ul si cheia PUBLICABILA (anon), niciodata service_role.
+6. Copiaza in htdocs numai .html, .css si .js, direct in radacina folderului, fara un subfolder suplimentar. NU publica fisierele .sql/.txt.
+7. In Supabase Authentication > URL Configuration, configureaza URL-ul website-ului.
+8. Testeaza cu doua conturi, inclusiv restaurant, si verifica consola browserului (F12 > Console / Network).
+
+ERORI FRECVENTE:
+- PROJECT_ID / REPLACE_ME in config.js: aplicatia nu se conecteaza.
+- SQL incomplet sau rulat in ordine gresita: lipsesc tabele / functii.
+- HTTP 404: fisierele au fost incarcate intr-un subfolder sau lipsesc.
+- Eroare RLS/permission denied: politica Supabase sau rolul utilizatorului nu corespunde.
+- Daca apare eroare la descarcarea ZIP-ului, foloseste descarcarea din linkul nou.
+
+Acest pachet NU a fost testat pe un proiect Supabase real sau un server InfinityFree.

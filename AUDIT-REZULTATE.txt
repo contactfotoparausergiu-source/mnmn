@@ -1,0 +1,10 @@
+ZUNIVO - audit static si corectii
+- Reparata incompatibilitatea dintre emailul nou si restrictia SQL care accepta doar litere/cifre/underscore.
+- Adaugata migrare pentru instalari Supabase existente.
+- Eliminata temporizarea fixa de 1 secunda pentru vizualizarile profilului.
+- Imbunatatite mesajele de autentificare in admin.
+- Tratare null pentru parametrii de paginare SQL.
+- Verificari automate: sintaxa JS, referinte locale HTML, integritate ZIP.
+LIMITARE: nu s-au executat teste end-to-end pe Supabase/hosting live. Nu este posibil sa se garanteze 100% lipsa bugurilor fara acces si teste functionale.
+ATENTIE: config.js contine valori exemplu; completeaza URL si cheia publicabila.
+Nu urca fisiere SQL/TXT in folderul public de hosting.
